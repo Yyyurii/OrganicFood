@@ -1,0 +1,30 @@
+.jam {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jam-item {
+  max-height: 370px;
+}
+
+.blackout-item-container {
+  position: relative;
+  background-color: rgb(28%, 27%, 27%, 0.7);
+  
+}
+
+.blackout-item {
+  position: relative;
+  z-index: -1;
+}
+
+.jam__item-title {
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  left: 45%;
+  font-size: 18px;
+  line-height: 23px;
+  color: white;
+}

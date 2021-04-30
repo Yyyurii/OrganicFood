@@ -1,0 +1,11 @@
+.logos {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logos__container {
+  margin: 3%;
+}
