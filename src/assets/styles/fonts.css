@@ -1,9 +1,9 @@
 @font-face {
   font-family: Storytella;
-  src: url(/src/assets/fonts/Storytella.otf);
+  src: url(../fonts/Storytella.otf);
  }
 
 @font-face {
   font-family: Lato;
-  src: url(/src/assets/fonts/Lato-Bold.ttf);
+  src: url(../fonts/Lato-Bold.ttf);
  }

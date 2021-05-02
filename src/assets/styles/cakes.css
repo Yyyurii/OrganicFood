@@ -29,7 +29,7 @@
 
 .cakes__banner {
   position: relative;
-  background-image: url(/src/assets/images/cakes5.png);
+  background-image: url(../images/cakes5.png);
   max-width: 100%;
   height: 685px;
   background-repeat: no-repeat;
