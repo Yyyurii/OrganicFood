@@ -1,0 +1,52 @@
+.about {
+  background-image: url(../images/about.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 9% 20%;
+}
+
+.about__text {
+  color: white;
+  margin: 50px auto;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.about__user {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.about__user-name {
+  padding: 0 25px;
+}
+
+@media (max-width: 767px) {
+  .about__text {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .about {
+    padding: 9% 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__text {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .services__title {
+    font-size: 25px;
+  }
+}
+
+.webp .about { background-image: url(../images/about.webp); }

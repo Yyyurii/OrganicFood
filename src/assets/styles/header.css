@@ -91,8 +91,13 @@
   bottom: 30px;
   left: 30px;
   color: white;
-  font-size: 24px
+  font-size: 24px;
+  font-family: 'Raleway-Thin';
 }
+/* 
+.products__content-title_font-weight {
+  font-family: 'Raleway-Black';
+} */
 
 .products__title {
   display: flex;
@@ -104,6 +109,14 @@
   white-space: pre-line;
   grid-area: title;
 }
+/* 
+.products__text-title {
+  font-family: 'Raleway-Black';
+}
+
+.products__text-subtitle {
+  font-family: 'Raleway-Thin';
+} */
 
 /*---------------------------*/
 
