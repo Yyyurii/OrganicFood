@@ -20,6 +20,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0 30px;
+  font-family: Raleway-Bold;
 }
 
 .progress__amount {
