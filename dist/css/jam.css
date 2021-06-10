@@ -32,3 +32,17 @@
   line-height: 23px;
   color: white;
 }
+
+@media (max-width: 480px) {
+  .jam-item picture img {
+    max-width: 300px;
+  }
+
+  .jam__item-title {
+    left: 39%;
+  }
+
+  .jam-item {
+    max-height: 278px;
+  }
+}

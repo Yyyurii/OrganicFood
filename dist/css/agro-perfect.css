@@ -31,4 +31,10 @@
   border: none;
 }
 
+@media (max-width: 480px) {
+  .agro-perfect__title {
+    font-size: 25px;
+  }
+}
+
 .webp .agro-perfect { background-image: url(../images/agro-perfect.webp); }

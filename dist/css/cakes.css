@@ -58,6 +58,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .cakes__menu {
+    top: 0px;
+  }
+}
+
 @media (max-width: 767px) {
   .cakes__menu {
     grid-template-columns: repeat(1, 1fr);
