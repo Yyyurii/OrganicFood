@@ -12,9 +12,9 @@
 }
 
 .agro-perfect__text {
-  padding: 0 0 0 13%;
+  padding: 0 13% 0 13%;
   display: inline-block;
-  width: 540px;
+  max-width: 540px;
   line-height: 23px;
   font-size: 14px;
 }
@@ -29,6 +29,12 @@
   border-radius: 25px;
   background-color: #fcdb5a;
   border: none;
+}
+
+@media (max-width: 480px) {
+  .agro-perfect__title {
+    font-size: 25px;
+  }
 }
 
 .webp .agro-perfect { background-image: url(../images/agro-perfect.webp); }

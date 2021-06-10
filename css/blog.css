@@ -20,6 +20,7 @@
   margin: 15px;
   background-color: rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  background-blend-mode: darken;
 }
 
 .posts {
@@ -32,6 +33,18 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.post-1 {
+  background-image: url(../images/post1.png);
+}
+
+.post-2 {
+  background-image: url(../images/post2.png);
+}
+
+.post-3 {
+  background-image: url(../images/post3.png);
 }
 
 .post__img {
@@ -87,3 +100,9 @@
     margin: 40px auto;
   }
 }
+
+.webp .post-1 { background-image: url(../images/post1.webp); }
+
+.webp .post-2 { background-image: url(../images/post2.webp); }
+
+.webp .post-3 { background-image: url(../images/post3.webp); }
