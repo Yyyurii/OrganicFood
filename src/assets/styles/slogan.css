@@ -34,6 +34,27 @@
   font-family: 'Storytella';
 }
 
+.color__yellow {
+  color: #fde557;
+}
+
+.color__pink {
+  color: #e5248a;
+}
+
+.color__green {
+  color: #73b63c;
+}
+
+.color__orange {
+  color: #f7ab32;
+}
+
+.color__blue {
+  color: #4bbdd5;
+}
+
+
 @media (max-width: 1200px) {
   .slogan__image {
     grid-column: 2 / -1;
@@ -51,14 +72,14 @@
 
   .slogan__text {
     grid-column: 19 / -1;
-    font-size: 25px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
 @media (max-width: 480px) {
   .slogan__text {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 50px;
   }
 }

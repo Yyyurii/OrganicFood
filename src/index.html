@@ -93,13 +93,20 @@
 
   <section class="slogan">
     <div class="slogan__container">
-      <img class="slogan__image  stack-image" src="images/sloganImg.png" alt="">
-      <img class="slogan__image-frame stack-image" src="images/sloganImgFrame.png" alt="">
+      <picture class="slogan__image  stack-image">
+        <source srcset="images/sloganImg.webp" type="image/webp">
+        <img class="slogan__image  stack-image" src="images/sloganImg.png" alt="">
+      </picture>
+      
+      <picture class="slogan__image-frame stack-image">
+        <source srcset="images/sloganImgFrame.webp" type="image/webp">
+        <img class="slogan__image-frame stack-image" src="images/sloganImgFrame.png" alt="">
+      </picture>
       <span class="slogan__text">
-        Quality food
-        is the most
-        important thing
-        in our life
+        <span class="color__yellow">Quality</span> <span class="color__зштл">food
+        is the</span> <span class="color__green">most
+        important</span> <span class="color__orange">thing
+        in our</span> <span class="color__blue">life</span>
       </span>
     </div>
   </section>
