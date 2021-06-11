@@ -1,5 +1,59 @@
 console.log('hello')
 
+document.addEventListener('DOMContentLoaded', () => {
+
+  const animItems = document.querySelectorAll('._anim-items');
+
+  if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+    function animOnScroll() {
+      for (let index = 0; index < animItems.length; index++) {
+        const animItem = animItems[index];
+        const animItemHeight = animItem.offsetHeight;
+        const animItemOffset = offset(animItem).top;
+
+        let animItemPoint = window.innerHeight - animItemHeight / 4;
+        if (animItemHeight > window.innerHeight) {
+          animItemPoint = window.innerHeight - window.innerHeight / 4;
+        }
+
+        if ( (pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+          animItem.classList.add('_active');
+        } else {
+          if ( !animItem.classList.contains('_anim-no-repeat')) {
+            animItem.classList.remove('_active');
+          }
+          
+        }
+      }
+    }
+    
+    setTimeout(() => {
+      document.querySelector('.title__text').classList.add('_active');
+      animOnScroll();
+    }, 300)
+    
+  }
+
+  function offset(element) {
+    const rect = element.getBoundingClientRect();
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
+    }
+  }
+
+
+
+
+
+
+
+
+});
+
 const iconMenu = document.querySelector('.label_checkbox');
 
 if (iconMenu) {
