@@ -130,11 +130,6 @@
   font-family: 'Raleway-Thin';
 }
 
-/* 
-.products__content-title_font-weight {
-  font-family: 'Raleway-Black';
-} */
-
 .products__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,14 +147,22 @@
   grid-area: title;
 }
 
-/* 
-.products__text-title {
-  font-family: 'Raleway-Black';
+._anim-show {
+  -webkit-transform: translate(120%, 0);
+      -ms-transform: translate(120%, 0);
+          transform: translate(120%, 0);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
-.products__text-subtitle {
-  font-family: 'Raleway-Thin';
-} */
+._anim-show._active {
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
 
 /*---------------------------*/
 

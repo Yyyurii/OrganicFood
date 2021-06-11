@@ -13,6 +13,15 @@
   grid-column: 6 / -1;
   grid-row: 1;
   padding: 80px 0 0;
+
+  transform: translate(-120%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.slogan__image._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .slogan__image-frame {
@@ -20,6 +29,15 @@
   grid-row: 1;
   padding-top: 4%;
   z-index: 1;
+
+  transform: translate(0, -120%);
+  opacity: 0;
+  transition: all 0.8s ease 1s;
+}
+
+.slogan__image-frame._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .slogan__text {
@@ -32,6 +50,15 @@
   grid-row: 1;
   z-index: 2;
   font-family: 'Storytella';
+
+  transform: translate(120%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.slogan__text._active {
+  opacity: 1;
+  transform: translate(0px, 0px);
 }
 
 .color__yellow {

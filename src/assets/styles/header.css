@@ -104,10 +104,6 @@
   font-size: 24px;
   font-family: 'Raleway-Thin';
 }
-/* 
-.products__content-title_font-weight {
-  font-family: 'Raleway-Black';
-} */
 
 .products__title {
   display: flex;
@@ -119,15 +115,16 @@
   white-space: pre-line;
   grid-area: title;
 }
-/* 
-.products__text-title {
-  font-family: 'Raleway-Black';
+
+._anim-show {
+  transform: translate(120%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
 }
-
-.products__text-subtitle {
-  font-family: 'Raleway-Thin';
-} */
-
+._anim-show._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
 /*---------------------------*/
 
 @media (max-width: 1450px) {
