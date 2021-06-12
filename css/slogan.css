@@ -76,6 +76,10 @@
           transform: translate(0px, 0px);
 }
 
+picture img {
+  max-width: 100%;
+}
+
 .color__yellow {
   color: #fde557;
 }
