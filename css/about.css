@@ -10,6 +10,20 @@
   margin: 50px auto;
   font-size: 25px;
   line-height: 30px;
+  -webkit-transform: translate(0, -120%);
+      -ms-transform: translate(0, -120%);
+          transform: translate(0, -120%);
+  opacity: 0;
+}
+
+.about__text._active {
+  -webkit-transition: all 0.8s ease 0.8s;
+  -o-transition: all 0.8s ease 0.8s;
+  transition: all 0.8s ease 0.8s;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__user {
@@ -21,6 +35,20 @@
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  -webkit-transform: translate(0, -120%);
+      -ms-transform: translate(0, -120%);
+          transform: translate(0, -120%);
+  opacity: 0;
+}
+
+.about__user._active {
+  -webkit-transition: all 0.8s ease 1.1s;
+  -o-transition: all 0.8s ease 1.1s;
+  transition: all 0.8s ease 1.1s;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__user-name {
