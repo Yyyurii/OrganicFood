@@ -14,6 +14,14 @@
   background-color: rgba(0, 0, 0, 0.3);
   overflow: hidden;
   background-blend-mode: darken;
+
+  transform: scale3d(0);
+  opacity: 0;
+}
+
+.post._active {
+  transform: scale3d(1);
+  opacity: 1;
 }
 
 .posts {
@@ -25,14 +33,21 @@
 
 .post-1 {
   background-image: url(../images/post1.png);
+  
+}
+
+.post-1._active {
+  transition: all 2s ease 0s;
 }
 
 .post-2 {
   background-image: url(../images/post2.png);
+  transition: all 2s ease 0.4s;
 }
 
 .post-3 {
   background-image: url(../images/post3.png);
+  transition: all 2s ease 0.8s;
 }
 
 .post__img {

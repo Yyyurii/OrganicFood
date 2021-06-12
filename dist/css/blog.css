@@ -21,6 +21,15 @@
   background-color: rgba(0, 0, 0, 0.3);
   overflow: hidden;
   background-blend-mode: darken;
+  -webkit-transform: scale3d(0);
+          transform: scale3d(0);
+  opacity: 0;
+}
+
+.post._active {
+  -webkit-transform: scale3d(1);
+          transform: scale3d(1);
+  opacity: 1;
 }
 
 .posts {
@@ -39,12 +48,24 @@
   background-image: url(../images/post1.png);
 }
 
+.post-1._active {
+  -webkit-transition: all 2s ease 0s;
+  -o-transition: all 2s ease 0s;
+  transition: all 2s ease 0s;
+}
+
 .post-2 {
   background-image: url(../images/post2.png);
+  -webkit-transition: all 2s ease 0.4s;
+  -o-transition: all 2s ease 0.4s;
+  transition: all 2s ease 0.4s;
 }
 
 .post-3 {
   background-image: url(../images/post3.png);
+  -webkit-transition: all 2s ease 0.8s;
+  -o-transition: all 2s ease 0.8s;
+  transition: all 2s ease 0.8s;
 }
 
 .post__img {

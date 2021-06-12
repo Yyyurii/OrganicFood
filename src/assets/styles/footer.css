@@ -1,6 +1,15 @@
 .footer {
   display: flex;
   background-color: #2e2e2e;
+
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+
+.footer._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all 0.8s ease 0s;
 }
 
 
