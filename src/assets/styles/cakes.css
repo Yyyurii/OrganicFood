@@ -34,6 +34,13 @@
   height: 685px;
   background-repeat: no-repeat;
   background-position: right;
+
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.cakes__banner._active {
+  opacity: 1;
 }
 
 .cakes__banner h1 {

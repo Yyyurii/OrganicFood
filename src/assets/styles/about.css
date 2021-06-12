@@ -10,6 +10,15 @@
   margin: 50px auto;
   font-size: 25px;
   line-height: 30px;
+
+  transform: translate(0, -120%);
+  opacity: 0;
+}
+
+.about__text._active {
+  transition: all 0.8s ease 0.8s;
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__user {
@@ -17,6 +26,15 @@
   display: flex;
   align-items: center;
   color: white;
+
+  transform: translate(0, -120%);
+  opacity: 0;
+}
+
+.about__user._active {
+  transition: all 0.8s ease 1.1s;
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about__user-name {
