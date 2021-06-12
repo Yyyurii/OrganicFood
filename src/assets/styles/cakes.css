@@ -51,6 +51,30 @@
   top: 5.5%;
 }
 
+.cakes-block1 {
+  transform: translate(-120%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.cakes-block1._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.cakes-block2 {
+  transform: translate(120%, 0);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.cakes-block2._active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+/*---------------MEDIA------------------*/
+
 @media (max-width:1200px) {
   .cakes__menu {
     grid-template-columns: repeat(2, 1fr);
