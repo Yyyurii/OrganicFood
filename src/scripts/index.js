@@ -45,13 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-
-
-
-
-
-
-
 });
 
 const iconMenu = document.querySelector('.label_checkbox');
@@ -77,3 +70,24 @@ testWebP(function (support) {
     document.querySelector('body').classList.add('webp')
   }
 });
+
+//num++
+
+const time = 2000;
+const step = 5;
+
+function outNum(num, element) {
+  let item = document.querySelector('.' + element);
+  n = 0;
+  let timeInterval = Math.round(time / (num / step));
+  let counter = setInterval(() => {
+    n = n + step;
+    if (n === num) {
+      clearInterval(counter)
+    }
+    item.innerHTML = n;
+  }, timeInterval);
+}
+
+outNum( 350, '_muffins-amount');
+
