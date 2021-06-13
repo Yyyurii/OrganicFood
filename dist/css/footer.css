@@ -3,9 +3,9 @@
   display: -ms-flexbox;
   display: flex;
   background-color: #2e2e2e;
-  -webkit-transform: translate(0, 100%);
-      -ms-transform: translate(0, 100%);
-          transform: translate(0, 100%);
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   opacity: 0;
 }
 

@@ -96,14 +96,14 @@
 
 @media (max-width: 480px) {
   .jam-item picture img {
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .jam__item-title {
     left: 39%;
   }
 
-  .jam-item {
+  /* .jam-item {
     max-height: 277px;
-  }
+  } */
 }

@@ -37,17 +37,17 @@
 }
 
 .post-1._active {
-  transition: all 2s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .post-2 {
   background-image: url(../images/post2.png);
-  transition: all 2s ease 0.4s;
+  transition: all 1s ease 0.4s;
 }
 
 .post-3 {
   background-image: url(../images/post3.png);
-  transition: all 2s ease 0.8s;
+  transition: all 1s ease 0.8s;
 }
 
 .post__img {

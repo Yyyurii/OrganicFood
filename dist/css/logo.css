@@ -31,31 +31,31 @@
 }
 
 ._anim-show-scale:nth-child(1)._active {
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 ._anim-show-scale:nth-child(2)._active {
-  -webkit-transition: all 0.8s ease 0.3s;
-  -o-transition: all 0.8s ease 0.3s;
-  transition: all 0.8s ease 0.3s;
+  -webkit-transition: all 0.5s ease 0.1s;
+  -o-transition: all 0.5s ease 0.1s;
+  transition: all 0.5s ease 0.1s;
 }
 
 ._anim-show-scale:nth-child(3)._active {
-  -webkit-transition: all 0.8s ease 0.6s;
-  -o-transition: all 0.8s ease 0.6s;
-  transition: all 0.8s ease 0.6s;
+  -webkit-transition: all 0.5s ease 0.3s;
+  -o-transition: all 0.5s ease 0.3s;
+  transition: all 0.5s ease 0.3s;
 }
 
 ._anim-show-scale:nth-child(4)._active {
-  -webkit-transition: all 0.8s ease 0.9s;
-  -o-transition: all 0.8s ease 0.9s;
-  transition: all 0.8s ease 0.9s;
+  -webkit-transition: all 0.5s ease 0.5s;
+  -o-transition: all 0.5s ease 0.5s;
+  transition: all 0.5s ease 0.5s;
 }
 
 ._anim-show-scale:nth-child(5)._active {
-  -webkit-transition: all 0.8s ease 1.2s;
-  -o-transition: all 0.8s ease 1.2s;
-  transition: all 0.8s ease 1.2s;
+  -webkit-transition: all 0.5s ease 0.7s;
+  -o-transition: all 0.5s ease 0.7s;
+  transition: all 0.5s ease 0.7s;
 }
