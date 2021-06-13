@@ -27,12 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             animate(cakes[2], 0, 500, 2000);
             animate(cakes[3], 0, 685, 2000);
           });
-
         } else {
           if (!animItem.classList.contains('_anim-no-repeat')) {
             animItem.classList.remove('_active');
           }
-
         }
       }
     }
@@ -84,7 +82,8 @@ testWebP(function (support) {
 
 function animate(obj, initVal, lastVal, duration) {
 
-  let startTime = null;
+  if (!obj.classList.contains('_active')) {
+    let startTime = null;
 
   //get the current timestamp and assign it to the currentTime variable
   let currentTime = Date.now();
@@ -112,5 +111,6 @@ function animate(obj, initVal, lastVal, duration) {
     }
   };
   window.requestAnimationFrame(step);
+  }
 }
 
