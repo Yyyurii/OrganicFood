@@ -119,6 +119,7 @@ function animate(obj, initVal, lastVal, duration) {
 
 // fix header
 const header = $('.nav');
+const headerWrapper = $('.nav__wrapper');
 const hederHeight = header.height(); // вычисляем высоту шапки
 
 function fixedHeader() {
@@ -127,10 +128,19 @@ function fixedHeader() {
     $('body').css({
       'paddingTop': hederHeight + 'px' // делаем отступ у body, равный высоте шапки
     });
+    headerWrapper.css({
+      'padding': '0.5% 0 0.5% 13.5%'
+    });
   } else {
     header.removeClass('nav__fixed');
     $('body').css({
       'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
     })
+    headerWrapper.css({
+      'padding': '3% 0 3% 13.5%'
+    });
   }
 };
+
+//slider
+$('.about').slick();
