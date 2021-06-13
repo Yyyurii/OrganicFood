@@ -3,6 +3,7 @@ console.log('hello')
 document.addEventListener('DOMContentLoaded', () => {
 
   const animItems = document.querySelectorAll('._anim-items');
+  const cakes = document.querySelectorAll('.progress__amount');
 
   if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
@@ -17,22 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
           animItemPoint = window.innerHeight - window.innerHeight / 4;
         }
 
-        if ( (pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
           animItem.classList.add('_active');
+
+          cakes.forEach(() => {
+            animate(cakes[0], 0, 350, 2000);
+            animate(cakes[1], 0, 150, 2000);
+            animate(cakes[2], 0, 500, 2000);
+            animate(cakes[3], 0, 685, 2000);
+          });
+
         } else {
-          if ( !animItem.classList.contains('_anim-no-repeat')) {
+          if (!animItem.classList.contains('_anim-no-repeat')) {
             animItem.classList.remove('_active');
           }
-          
+
         }
       }
     }
-    
+
     setTimeout(() => {
       document.querySelector('.title__text').classList.add('_active');
       animOnScroll();
     }, 300)
-    
+
   }
 
   function offset(element) {
@@ -51,7 +60,7 @@ const iconMenu = document.querySelector('.label_checkbox');
 
 if (iconMenu) {
   const menuBody = document.querySelector('.burger__list');
-  
+
   iconMenu.addEventListener('click', (e) => {
     menuBody.classList.toggle('_active');
   })
@@ -60,7 +69,7 @@ if (iconMenu) {
 //webp
 function testWebP(callback) {
   var webP = new Image();
-  webP.onload = webP.onerror = function() {
+  webP.onload = webP.onerror = function () {
     callback(webP.height == 2);
   };
   webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
@@ -73,21 +82,35 @@ testWebP(function (support) {
 
 //num++
 
-const time = 2000;
-const step = 5;
+function animate(obj, initVal, lastVal, duration) {
 
-function outNum(num, element) {
-  let item = document.querySelector('.' + element);
-  n = 0;
-  let timeInterval = Math.round(time / (num / step));
-  let counter = setInterval(() => {
-    n = n + step;
-    if (n === num) {
-      clearInterval(counter)
+  let startTime = null;
+
+  //get the current timestamp and assign it to the currentTime variable
+  let currentTime = Date.now();
+
+  //pass the current timestamp to the step function
+  let step = (currentTime) => {
+
+    //if the start time is null, assign the current time to startTime
+    if (!startTime) {
+      startTime = currentTime;
     }
-    item.innerHTML = n;
-  }, timeInterval);
-}
 
-outNum( 350, '_muffins-amount');
+    //calculate the value to be used in calculating the number to be displayed
+    let progress = Math.min((currentTime - startTime) / duration, 1);
+
+    //calculate what to be displayed using the value gotten above
+    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal) + '+';
+
+    //checking to make sure the counter does not exceed the last value (lastVal)
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+    else {
+      window.cancelAnimationFrame(window.requestAnimationFrame(step));
+    }
+  };
+  window.requestAnimationFrame(step);
+}
 
