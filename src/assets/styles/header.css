@@ -2,6 +2,7 @@
   background-image: url(../images/header.png);
   background-position: top;
   background-repeat: no-repeat;
+  max-width: 1600px;
 }
 
 .nav {
@@ -16,6 +17,7 @@
 .nav__wrapper {
   display: flex;
   align-items: center;
+  padding: 3% 13.5%;
 }
 
 .nav__list-item {
@@ -24,10 +26,22 @@
   text-decoration: none;
 }
 
-.nav__button {
+.nav__button-container {
+  padding: 3% 13.5%;
+}
+.nav__button-comtainer {
   width: 150px;
   height: 45px;
   border-radius: 25px;
+}
+
+.nav__fixed {
+  position: fixed;
+  top: 0;
+  max-width: inherit;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, .6);
 }
 
 .logo {
@@ -148,17 +162,11 @@
 
 @media (max-width:1200px) {
   .nav {
-    padding: 3% 4.5%;
+    /* padding: 3% 4.5%; */
   }
 
 }
 
-@media (min-width:1200px) {
-  .nav {
-    padding: 3% 13.5%;
-  }
-
-}
 
 @media (max-width:1024px) {
 

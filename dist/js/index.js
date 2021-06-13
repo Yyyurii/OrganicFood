@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const cakes = document.querySelectorAll('.progress__amount');
 
   if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
+    window.addEventListener('scroll', () => {
+      fixedHeader();
+      animOnScroll();
+    });
     function animOnScroll() {
       for (let index = 0; index < animItems.length; index++) {
         const animItem = animItems[index];
@@ -85,32 +88,49 @@ function animate(obj, initVal, lastVal, duration) {
   if (!obj.classList.contains('_active')) {
     let startTime = null;
 
-  //get the current timestamp and assign it to the currentTime variable
-  let currentTime = Date.now();
+    //get the current timestamp and assign it to the currentTime variable
+    let currentTime = Date.now();
 
-  //pass the current timestamp to the step function
-  let step = (currentTime) => {
+    //pass the current timestamp to the step function
+    let step = (currentTime) => {
 
-    //if the start time is null, assign the current time to startTime
-    if (!startTime) {
-      startTime = currentTime;
-    }
+      //if the start time is null, assign the current time to startTime
+      if (!startTime) {
+        startTime = currentTime;
+      }
 
-    //calculate the value to be used in calculating the number to be displayed
-    let progress = Math.min((currentTime - startTime) / duration, 1);
+      //calculate the value to be used in calculating the number to be displayed
+      let progress = Math.min((currentTime - startTime) / duration, 1);
 
-    //calculate what to be displayed using the value gotten above
-    obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal) + '+';
+      //calculate what to be displayed using the value gotten above
+      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal) + '+';
 
-    //checking to make sure the counter does not exceed the last value (lastVal)
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
-    else {
-      window.cancelAnimationFrame(window.requestAnimationFrame(step));
-    }
-  };
-  window.requestAnimationFrame(step);
+      //checking to make sure the counter does not exceed the last value (lastVal)
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+      else {
+        window.cancelAnimationFrame(window.requestAnimationFrame(step));
+      }
+    };
+    window.requestAnimationFrame(step);
   }
 }
 
+// fix header
+const header = $('.nav');
+const hederHeight = header.height(); // вычисляем высоту шапки
+
+function fixedHeader() {
+  if ($(this).scrollTop() > 170) {
+    header.addClass('nav__fixed');
+    $('body').css({
+      'paddingTop': hederHeight + 'px' // делаем отступ у body, равный высоте шапки
+    });
+  } else {
+    header.removeClass('nav__fixed');
+    $('body').css({
+      'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
+    })
+  }
+};
