@@ -122,8 +122,8 @@ const header = $('.nav');
 const hederHeight = header.height(); // вычисляем высоту шапки
 
 function fixedHeader() {
-  if ($(this).scrollTop() > 170) {
-    header.addClass('nav__fixed');
+  if ($(this).scrollTop() > 170 || window.pageYOffset > 170) {
+    header.addClass('nav__fixed _active');
     $('body').css({
       'paddingTop': hederHeight + 'px' // делаем отступ у body, равный высоте шапки
     });

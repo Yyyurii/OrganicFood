@@ -29,7 +29,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3% 13.5%;
+  padding: 3% 0 3% 13.5%;
+  width: 100%;
 }
 
 .nav__list-item {
@@ -39,10 +40,10 @@
 }
 
 .nav__button-container {
-  padding: 3% 13.5%;
+  padding: 3% 13.5% 3% 0;
 }
 
-.nav__button-comtainer {
+.nav__button {
   width: 150px;
   height: 45px;
   border-radius: 25px;
@@ -224,6 +225,10 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
+
+  .nav__wrapper {
+    padding: 1.5% 0 1.5% 13.5%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -246,6 +251,11 @@
   .title__text {
     padding: 8%;
     font-size: 100px;
+  }
+
+  .logo {
+    min-width: 75px;
+    height: 97.5px;
   }
 }
 
