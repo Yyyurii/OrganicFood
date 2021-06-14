@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
       fixedHeader();
       animOnScroll();
+      scrollUp();
     });
     function animOnScroll() {
       for (let index = 0; index < animItems.length; index++) {
@@ -146,4 +147,21 @@ function fixedHeader() {
 $('.about__slider').slick({
   prevArrow: '<button id="prev" type="button" class="btn btn-juliet"><i class="arrow left"></button>',
   nextArrow: '<button id="next" type="button" class="btn btn-juliet"><i class="arrow right"></button>'
+});
+
+//scroll up
+function scrollUp() {
+  if ($(this).scrollTop() > 200) {
+    $('.scrollup').fadeIn();
+  }
+  else {
+    $('.scrollup').fadeOut();
+  }
+}
+$(function () {
+  $('.scrollup').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 800);
+  })
 });

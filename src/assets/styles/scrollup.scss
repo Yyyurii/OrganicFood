@@ -1,0 +1,28 @@
+.scrollup {
+  position: fixed;
+  right: 20px; 
+  bottom: 20px; 
+  padding: 4px 10px; 
+  font-size: 40px; 
+  cursor: pointer;
+  display: none; 
+  text-align: center; 
+  opacity: 0.7;
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .scrollup {
+    right: 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .scrollup {
+    right: 7px;
+  }
+}
