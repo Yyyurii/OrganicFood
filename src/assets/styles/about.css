@@ -7,7 +7,7 @@
 
 .about__text {
   color: white;
-  margin: 50px auto;
+  margin: 50px 50px;
   font-size: 25px;
   line-height: 30px;
 
@@ -22,7 +22,7 @@
 }
 
 .about__user {
-  margin: 0 auto;
+  margin: 0 50px;
   display: flex;
   align-items: center;
   color: white;
@@ -32,7 +32,7 @@
 }
 
 .about__user._active {
-  transition: all 0.8s ease 0.8s;
+  transition: all 0.8s ease 0.5s;
   transform: translate(0, 0);
   opacity: 1;
 }
@@ -40,6 +40,7 @@
 .about__user-name {
   padding: 0 25px;
 }
+
 
 @media (max-width:767px) {
   .about__text {

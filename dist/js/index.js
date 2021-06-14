@@ -143,4 +143,4 @@ function fixedHeader() {
 };
 
 //slider
-$('.about').slick();
+$('.about__slider').slick();

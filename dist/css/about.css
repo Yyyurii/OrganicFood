@@ -7,7 +7,7 @@
 
 .about__text {
   color: white;
-  margin: 50px auto;
+  margin: 50px 50px;
   font-size: 25px;
   line-height: 30px;
   -webkit-transform: translate(0, -120%);
@@ -27,7 +27,7 @@
 }
 
 .about__user {
-  margin: 0 auto;
+  margin: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,9 +42,9 @@
 }
 
 .about__user._active {
-  -webkit-transition: all 0.8s ease 0.8s;
-  -o-transition: all 0.8s ease 0.8s;
-  transition: all 0.8s ease 0.8s;
+  -webkit-transition: all 0.8s ease 0.5s;
+  -o-transition: all 0.8s ease 0.5s;
+  transition: all 0.8s ease 0.5s;
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);

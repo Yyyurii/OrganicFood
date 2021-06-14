@@ -89,11 +89,11 @@
 .awesome-cupcake._active {
   transform:  scale(1);
   opacity: 1;
-  transition: all 0.2s ease 1.2s;
+  transition: all 0.2s ease 0.8s;
 }
 
 .vegetables._active {
   transform:  scale(1);
   opacity: 1;
-  transition: all 0.2s ease 1.6s;
+  transition: all 0.2s ease 1s;
 }
