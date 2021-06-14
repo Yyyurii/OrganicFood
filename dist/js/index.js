@@ -143,4 +143,7 @@ function fixedHeader() {
 };
 
 //slider
-$('.about__slider').slick();
+$('.about__slider').slick({
+  // prevArrow: '<button style="background: url(../images/circle-left.svg)" id="prev" type="button" class="btn btn-juliet"></button>',
+  // nextArrow: '<button style="background: url(../images/circle-right.svg)" id="next" type="button" class="btn btn-juliet"></button>'
+});
