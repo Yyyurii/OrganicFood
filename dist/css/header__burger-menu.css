@@ -1,0 +1,109 @@
+#menu_checkbox {
+  display: none;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .burger__list {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 200px;
+    height: 280px;
+    background-color: black;
+    opacity: 0.85;
+    font-size: 20px;
+    padding: 5%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 15px;
+    z-index: 2;
+  }
+
+  .burger__list._active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .burger__list-item {
+    padding: 0 35px 0 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  .burger__list-item:hover {
+    text-decoration: underline;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin: 0 auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: 0.3s ease transform;
+    -o-transition: 0.3s ease transform;
+    transition: 0.3s ease transform;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  label div {
+    width: 6px;
+    height: 6px;
+    background-color: #FFC107;
+    margin-left: 0;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    -webkit-transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom, 0.3s ease background-color;
+    -o-transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom, 0.3s ease background-color;
+    transition: 0.3s ease width, 0.3s ease margin-left, 0.3s ease margin-bottom, 0.3s ease background-color;
+  }
+
+  label div:first-child {
+    width: 22px;
+  }
+
+  label div:nth-child(2) {
+    width: 15px;
+  }
+
+  label div:last-child {
+    width: 30px;
+    margin-bottom: 0;
+  }
+
+  #menu_checkbox:checked + label {
+    -webkit-transform: translateY(-50%) rotateZ(-90deg);
+        -ms-transform: translateY(-50%) rotate(-90deg);
+            transform: translateY(-50%) rotateZ(-90deg);
+  }
+
+  #menu_checkbox:checked + label div {
+    width: 6px;
+    margin-left: 12px;
+    margin-bottom: 3px;
+    background-color: #FFC107;
+  }
+}
