@@ -143,4 +143,7 @@ function fixedHeader() {
 };
 
 //slider
-$('.about').slick();
+$('.about__slider').slick({
+  prevArrow: '<button id="prev" type="button" class="btn btn-juliet"><i class="arrow left"></button>',
+  nextArrow: '<button id="next" type="button" class="btn btn-juliet"><i class="arrow right"></button>'
+});

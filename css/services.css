@@ -127,9 +127,9 @@
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
-  -webkit-transition: all 0.2s ease 1.2s;
-  -o-transition: all 0.2s ease 1.2s;
-  transition: all 0.2s ease 1.2s;
+  -webkit-transition: all 0.2s ease 0.8s;
+  -o-transition: all 0.2s ease 0.8s;
+  transition: all 0.2s ease 0.8s;
 }
 
 .vegetables._active {
@@ -137,7 +137,7 @@
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
-  -webkit-transition: all 0.2s ease 1.6s;
-  -o-transition: all 0.2s ease 1.6s;
-  transition: all 0.2s ease 1.6s;
+  -webkit-transition: all 0.2s ease 1s;
+  -o-transition: all 0.2s ease 1s;
+  transition: all 0.2s ease 1s;
 }
