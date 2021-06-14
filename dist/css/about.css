@@ -61,14 +61,25 @@
   display: flex;
 }
 
+@media (max-width: 1024px) {
+  .about {
+    padding: 9% 10%;
+  }
+
+  .about__text {
+    margin: 25px 25px;
+  }
+}
+
 @media (max-width: 767px) {
   .about__text {
     font-size: 20px;
     line-height: 23px;
+    margin: 10px 10px;
   }
 
   .about {
-    padding: 9% 10%;
+    padding: 4% 5%;
   }
 }
 

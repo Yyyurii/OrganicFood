@@ -178,6 +178,7 @@
   border-width: 0 13px 13px 0;
   display: inline-block;
   padding: 13px;
+  cursor: pointer;
 }
 
 .right {
@@ -196,4 +197,23 @@
   background-color: inherit;
   border: none;
   color: white;
+}
+
+.arrow:hover {
+  border-color: wheat;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+@media (max-width: 1024px) {
+  .arrow {
+    border-width: 0 10px 10px 0;
+    padding: 10px;
+  }
+
+  .arrow {
+    border-width: 0 7px 7px 0;
+    padding: 7px;
+  }
 }
