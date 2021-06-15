@@ -59,12 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const iconMenu = document.querySelector('.label_checkbox');
+const burgerMenu = document.querySelector('.burger-menu');
+
 
 if (iconMenu) {
   const menuBody = document.querySelector('.burger__list');
 
   iconMenu.addEventListener('click', (e) => {
     menuBody.classList.toggle('_active');
+  })
+
+  const burgerListItem = document.querySelectorAll('.burger__list-item');
+  burgerListItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      menuBody.classList.toggle('_active');
+      document.getElementById('menu_checkbox').checked = false;
+    })
   })
 }
 
